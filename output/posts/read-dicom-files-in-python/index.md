@@ -2,8 +2,8 @@
 .. title: Read DICOM files in Python
 .. slug: read-dicom-files-in-python
 .. date: 2016-04-18 13:07:55 UTC+02:00
-.. tags: dicom; python; pydicom
-.. category: python dicom
+.. tags: dicom, python, pydicom
+.. category: python,dicom
 .. link: 
 .. description: 
 .. type: text
