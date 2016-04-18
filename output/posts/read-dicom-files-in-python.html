@@ -65,6 +65,7 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <h3>Dataset</h3>
 <p>Dataset is the main object you will work with directly. Dataset is derived from python’s dict, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of key:value pairs, where the key value is the DICOM (group,element) tag (as a Tag object, described below), and the value is a DataElement instance (also described below).</p>
 <p>A dataset could be created directly, but you will usually get one by reading an existing DICOM file:</p>
+<p>"<!-- TEASER_END -->\n",</p>
 <pre class="code literal-block"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pydicom</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">pydicom</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">"rtplan.dcm"</span><span class="p">)</span> <span class="c"># (rtplan.dcm is in the testfiles directory)</span>
 </pre>

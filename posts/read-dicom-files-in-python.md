@@ -14,6 +14,8 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 
 A dataset could be created directly, but you will usually get one by reading an existing DICOM file:
 
+"<!-- TEASER_END -->\n",
+
 ```python
 >>> import pydicom
 >>> ds = pydicom.read_file("rtplan.dcm") # (rtplan.dcm is in the testfiles directory)
