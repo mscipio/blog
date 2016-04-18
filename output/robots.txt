@@ -1,4 +1,4 @@
-Sitemap: http://mscipio.github.io/sitemapindex.xml
+Sitemap: http://www.damian.oquanta.info/sitemapindex.xml
 
 User-Agent: *
-Host: mscipio.github.io
+Host: www.damian.oquanta.info
