@@ -95,12 +95,9 @@ NAVIGATION_LINKS = {
         ('/index.html', 'Home', 'icon-home'),
         ('/archive.html', 'Archives', 'icon-folder-open-alt'),
         ('/categories/index.html', 'Tags', 'icon-tags'),
-        ('/rss.xml', 'RSS', 'icon-rss'),
-        ('/portfolio/portfolio.slides.html', 'Portfolio', 'icon-briefcase'),
+        ('https://it.linkedin.com/in/scipionimichele', 'Linkedin', 'icon-linkedin'),
         ('/stories/about-me.html', 'About me', 'icon-user'),
-        ('https://twitter.com/damian_avila', 'My Twitter', 'icon-twitter'),
-        ('https://github.com/damianavila', 'My Github', 'icon-github'),
-        ('https://plus.google.com/u/0/106896109587369688379/posts', 'My Google+', 'icon-google-plus'),
+        ('https://github.com/mscipio', 'My Github', 'icon-github'),
     ),
 }
 
