@@ -7,42 +7,42 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mscipio.github.io/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/2016/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/archive.html</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:52:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/cat_pythondicom/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/dicom-python-pydicom/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/galleries/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/listings/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/posts/read-dicom-files-in-python/</loc>
-  <lastmod>2016-04-18T11:11:00Z</lastmod>
+  <lastmod>2016-04-18T11:51:00Z</lastmod>
  </url>
 </urlset>
