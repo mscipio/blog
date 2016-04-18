@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/</loc>
-  <lastmod>2016-04-18T12:12:00Z</lastmod>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/cat_python-dicom/</loc>
@@ -27,11 +27,23 @@
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/cat_pythondicom/</loc>
-  <lastmod>2016-04-18T11:51:00Z</lastmod>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/dicom-python-pydicom/</loc>
   <lastmod>2016-04-18T11:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mscipio.github.io/categories/dicom/</loc>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mscipio.github.io/categories/pydicom/</loc>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://mscipio.github.io/categories/python/</loc>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module/</loc>

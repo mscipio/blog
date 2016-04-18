@@ -11,18 +11,30 @@
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/categories/cat_pythondicom.xml</loc>
-  <lastmod>2016-04-18T11:52:00Z</lastmod>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/categories/dicom-python-pydicom.xml</loc>
   <lastmod>2016-04-18T12:12:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://mscipio.github.io/categories/dicom.xml</loc>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mscipio.github.io/categories/pydicom.xml</loc>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mscipio.github.io/categories/python.xml</loc>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://mscipio.github.io/rss.xml</loc>
-  <lastmod>2016-04-18T12:12:00Z</lastmod>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/sitemap.xml</loc>
-  <lastmod>2016-04-18T12:12:00Z</lastmod>
+  <lastmod>2016-04-18T12:14:00Z</lastmod>
  </sitemap>
 </sitemapindex>
