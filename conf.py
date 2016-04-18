@@ -548,7 +548,7 @@ REDIRECTIONS = []
 # https://getnikola.com/handbook.html#deploying-to-github
 # For user.github.io OR organization.github.io pages, the DEPLOY branch
 # MUST be 'master', and 'gh-pages' for other repositories.
-GITHUB_SOURCE_BRANCH = 'srcr'
+GITHUB_SOURCE_BRANCH = 'src'
 GITHUB_DEPLOY_BRANCH = 'master'
 
 # The name of the remote where you wish to push to, using github_deploy.
