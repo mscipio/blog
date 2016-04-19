@@ -22,13 +22,55 @@ fb: http://ogp.me/ns/fb#
 <body>
     <section class="social"><ul>
 <li><a href="#" title="Home"><i class="icon-home"></i></a></li>
-            <li><a href="archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
-            <li><a href="categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
-            <li><a href="https://it.linkedin.com/in/scipionimichele" title="Linkedin"><i class="icon-linkedin"></i></a></li>
             <li><a href="stories/about-me.html" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://it.linkedin.com/in/scipionimichele" title="Linkedin"><i class="icon-linkedin"></i></a></li>
             <li><a href="https://github.com/mscipio" title="My Github"><i class="icon-github"></i></a></li>
+            <li><a href="categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
 
         </ul></section><section class="page-content"><div class="content" rel="main">
+        <div class="post">
+            <h1 class="title"><a href="posts/read_dicom_files_in_python.html">How to read DICOM files into Python</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2016-04-19T12:00:47+02:00">2016-04-19 12:00</time>
+</div>
+                <div class="stats">
+                            <span class="fb-comments-count" data-url="/posts/read_dicom_files_in_python.html">
+
+
+                </span>
+</div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/dicom.html" rel="tag">dicom</a></li>
+           <li><a class="tag p-category" href="categories/medical-imaging.html" rel="tag">medical imaging</a></li>
+           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
+        </ul>
+</div>
+
+            </div>
+            <div class="body">
+                <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3>Dataset</h3>
+<p>Dataset is the main object you will work with directly. Dataset is derived from python’s dict, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of key:value pairs, where the key value is the DICOM (group,element) tag (as a Tag object, described below), and the value is a DataElement instance (also described below).</p>
+<p>A dataset could be created directly, but you will usually get one by reading an existing DICOM file (it could be a .dcm or a .img file):</p>
+<p class="more"><a href="posts/read_dicom_files_in_python.html">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+            </div>
+        </div>
         <div class="post">
             <h1 class="title"><a href="posts/pca-tutorial-using-scikit-learn-python-module.html">PCA tutorial using scikit-learn python module</a></h1>
             <div class="meta">
@@ -41,7 +83,15 @@ fb: http://ogp.me/ns/fb#
 
                 </span>
 </div>
-                
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/pca.html" rel="tag">PCA</a></li>
+           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
+           <li><a class="tag p-category" href="categories/scikit-learn.html" rel="tag">scikit-learn</a></li>
+        </ul>
+</div>
+
             </div>
             <div class="body">
                 <div tabindex="-1" id="notebook" class="border-box-sizing">
@@ -69,38 +119,6 @@ fb: http://ogp.me/ns/fb#
 </div>
 </div>
 </div>
-</div>
-            </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/read-dicom-files-in-python.html">Read DICOM files in Python</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-04-18T13:07:55+02:00">2016-04-18 13:07</time>
-</div>
-                <div class="stats">
-                            <span class="fb-comments-count" data-url="/posts/read-dicom-files-in-python.html">
-
-
-                </span>
-</div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/dicom.html" rel="tag">dicom</a></li>
-           <li><a class="tag p-category" href="categories/pydicom.html" rel="tag">pydicom</a></li>
-           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
-        </ul>
-</div>
-
-            </div>
-            <div class="body">
-                <div>
-<h3>Dataset</h3>
-<p>Dataset is the main object you will work with directly. Dataset is derived from python’s dict, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of key:value pairs, where the key value is the DICOM (group,element) tag (as a Tag object, described below), and the value is a DataElement instance (also described below).</p>
-<p>A dataset could be created directly, but you will usually get one by reading an existing DICOM file:</p>
-<p>"</p>
-<p class="more"><a href="posts/read-dicom-files-in-python.html">Read more…</a></p>
 </div>
             </div>
         </div>
