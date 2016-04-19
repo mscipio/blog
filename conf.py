@@ -95,7 +95,7 @@ NAVIGATION_LINKS = {
         ('/index.html', 'Home', 'icon-home'),
         ('/stories/about-me.html', 'About me', 'icon-user'),
         ('https://it.linkedin.com/in/scipionimichele', 'Linkedin', 'icon-linkedin'),
-        ('https://www.researchgate.net/profile/Michele_Scipioni','ResearchGate', 'icon-researchgate'),
+        ('https://www.researchgate.net/profile/Michele_Scipioni','ResearchGate', 'icon-registered'),
         ('https://github.com/mscipio', 'My Github', 'icon-github'),
         ('/categories/index.html', 'Tags', 'icon-tags'),
         ('/archive.html', 'Archives', 'icon-folder-open-alt'),
