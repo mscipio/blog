@@ -1,4 +1,4 @@
-I'm a "data scientist", but also a biochemist (currently finished a PhD program in a biological science: Immunology, you can see my biological CV clicking `here </ShortCV_English.pdf>`__) from the U.N.L.P. - Buenos Aires, Argentina. I'm also a TA in Immunology courses at U.N.L.P. and I taught biostatistics courses at the Colegio de Bioquímicos - Colegio Zonal XII - Buenos Aires. I'm a member of Python Argentina (PyAr) [1] and Quantitative Finance Club (QFClub) [2].
+I'm a biomedical engineer, but also an IT enthusiast (currently involved in a PhD program in biomedical engineering, you can see my CV clicking `here </ShortCV_English.pdf>`__) from the UNIPI - University of Pisa, Pisa, Italy. I'm also a TA in Immunology courses at U.N.L.P. and I taught biostatistics courses at the Colegio de Bioquímicos - Colegio Zonal XII - Buenos Aires. I'm a member of Python Argentina (PyAr) [1] and Quantitative Finance Club (QFClub) [2].
 
 My main focus is the quantitative financial time series research and analysis using Python as the main computational tool. But, I also develop several data science, computer vision, and IPython-related projects.
  
@@ -22,49 +22,3 @@ Ref:
 [1] http://python.org.ar/pyar/
 
 [2] http://quantfinanceclub.com/
-
-[3] http://us.pycon.org/2012/speaker/profile/119/
-
-[4] http://us.pycon.org/2012/schedule/presentation/513/
-
-[5] http://www.youtube.com/watch?v=MIAKOMzRl1I
-
-[6] http://www.youtube.com/watch?v=5YQrFiWa50M
-
-[7] https://conference.scipy.org/scipy2013/presentation_detail.php?id=130
-
-[8] https://conference.scipy.org/scipy2013/presentation_detail.php?id=168
-
-[9] http://www.youtube.com/watch?v=rBS6hmiK-H8
-
-[10] http://www.youtube.com/watch?v=NVf_giNcNro
-
-[11] http://www.pyday.com.ar/lujan2012/activity/accepted
-
-[12] http://ar.pycon.org/2011/activity/speakers
-
-[13] http://ar.pycon.org/2011/schedule/index
-
-[14] http://ar.pycon.org/2012/activity/accepted#76
-
-[15] http://www.youtube.com/watch?v=M-crhRKfsZU
-
-[16] conference page down
-
-[17] conference page down
-
-[18] video to be uploaded
-
-[19] video to be uploaded
-
-[20] http://github.com/damianavila/IPython-Plugin-for-NINJA-IDE
-
-[21] https://github.com/damianavila/vIPer
-
-[22] https://github.com/ipython/nbconvert/pull/69
-
-[23] http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html#/ 
-
-[24] https://github.com/ralsina/nikola/tree/master/extra_plugins/compile_ipynb
-
-[25] https://github.com/ralsina/nikola/tree/master/nikola/data/themes/site-reveal
