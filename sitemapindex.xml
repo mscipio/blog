@@ -7,34 +7,38 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://mscipio.github.io/categories/dicom.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/categories/medical-imaging.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/categories/pca.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://mscipio.github.io/categories/pydicom.xml</loc>
+  <lastmod>2016-04-19T12:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/categories/python.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/categories/scikit-learn.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/galleries/rss.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:39:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/rss.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mscipio.github.io/sitemap.xml</loc>
-  <lastmod>2016-04-19T10:26:00Z</lastmod>
+  <lastmod>2016-04-19T12:41:00Z</lastmod>
  </sitemap>
 </sitemapindex>
