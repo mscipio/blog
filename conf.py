@@ -93,11 +93,11 @@ TRANSLATIONS_PATTERN = "{path}.{ext}.{lang}"
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ('/index.html', 'Home', 'icon-home'),
-        ('/archive.html', 'Archives', 'icon-folder-open-alt'),
-        ('/categories/index.html', 'Tags', 'icon-tags'),
-        ('https://it.linkedin.com/in/scipionimichele', 'Linkedin', 'icon-linkedin'),
         ('/stories/about-me.html', 'About me', 'icon-user'),
+        ('https://it.linkedin.com/in/scipionimichele', 'Linkedin', 'icon-linkedin'),
         ('https://github.com/mscipio', 'My Github', 'icon-github'),
+        ('/categories/index.html', 'Tags', 'icon-tags'),
+        ('/archive.html', 'Archives', 'icon-folder-open-alt'),
     ),
 }
 
@@ -311,7 +311,7 @@ GITHUB_COMMIT_SOURCE = True
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
 # to the location of conf.py
-# OUTPUT_FOLDER = 'output'
+OUTPUT_FOLDER = 'output'
 
 # where the "cache" of partial generated content should be located
 # default: 'cache'
