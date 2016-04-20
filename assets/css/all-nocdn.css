@@ -3083,7 +3083,7 @@ div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizon
 @media (max-width:480px){div.input{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}
 div.input_prompt{color:#000080;border-top:1px solid transparent}
 div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}
-div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:14px;line-height:1.21429em}
+div.input_area>div.highlight>pre{margin:0;border:0;padding:0;background-color:transparent;font-size:12px;line-height:1.21429em}
 .CodeMirror{line-height:1.21429em;height:auto;background:none;}
 .CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}
 @-moz-document url-prefix(){.CodeMirror-scroll{overflow-x:hidden}}.CodeMirror-lines{padding:.4em}
@@ -3219,7 +3219,7 @@ pre {
 
 div.prompt {
   padding: 0.6em;
-  font-size: 13px;
+  font-size: 11px;
   /*background: url('../images/blue-mocha-grunge-reversed.jpg');*/
   margin-right: 1em;
   -webkit-border-radius: 3px;
@@ -3233,7 +3233,7 @@ div.output_prompt {
 }
 
 div.output_area pre {
-  font-size: 13px;
+  font-size: 11px;
 }
 
 div.text_cell_render {
@@ -3264,7 +3264,7 @@ div.text_cell_render {
   padding-top: 0.05em;
   padding-bottom: 0.05em;
   margin: 1em 0em;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .page-content > .content p {
