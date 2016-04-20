@@ -589,20 +589,20 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
 # (translatable)
-SOCIAL_BUTTONS_CODE = """
-<!-- Social buttons -->
-<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
-<a class="addthis_button_more"><i class="icon-share-sign icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Share</a>
-<ul>
-<li><a class="addthis_button_twitter"><i class="icon-twitter icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Twitter</a>
-<li><a class="addthis_button_google_plusone_share"><i class="icon-google-plus-sign icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Google+</a>
-<li><a class="addthis_button_linkedin"><i class="icon-linkedin icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Linkedin</a>
-<li><a class="addthis_button_facebook"><i class="icon-facebook-sign icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Facebook</a>
-</ul>
-</div>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
-<!-- End of social buttons -->
-"""
+#SOCIAL_BUTTONS_CODE = """
+#<!-- Social buttons -->
+#<div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+#<a class="addthis_button_more"><i class="icon-share-sign icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Share</a>
+#<ul>
+#<li><a class="addthis_button_twitter"><i class="icon-twitter icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Twitter</a>
+#<li><a class="addthis_button_google_plusone_share"><i class="icon-google-plus-sign icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Google+</a>
+#<li><a class="addthis_button_linkedin"><i class="icon-linkedin icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Linkedin</a>
+#<li><a class="addthis_button_facebook"><i class="icon-facebook-sign icon-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp;Facebook</a>
+#</ul>
+#</div>
+#<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+#<!-- End of social buttons -->
+#"""
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
@@ -656,14 +656,14 @@ SOCIAL_BUTTONS_CODE = """
 # """ % SITE_URL
 #
 # If you prefer a google search form, here's an example that should just work:
-# SEARCH_FORM = """
-# <!-- Custom search with google-->
-# <form id="search" action="//www.google.com/search" method="get" class="navbar-form pull-left">
-# <input type="hidden" name="q" value="site:%s" />
-# <input type="text" name="q" maxlength="255" results="0" placeholder="Search"/>
-# </form>
-# <!-- End of custom search -->
-#""" % SITE_URL
+SEARCH_FORM = """
+ <!-- Custom search with google-->
+ <form id="search" action="//www.google.com/search" method="get" class="navbar-form pull-left">
+ <input type="hidden" name="q" value="site:%s" />
+ <input type="text" name="q" maxlength="255" results="0" placeholder="Search"/>
+ </form>
+ <!-- End of custom search -->
+""" % SITE_URL
 
 # Use content distribution networks for jquery, twitter-bootstrap css and js,
 # and html5shiv (for older versions of Internet Explorer)
@@ -680,23 +680,23 @@ SOCIAL_BUTTONS_CODE = """
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-BODY_END = """
-<script data-gittip-username="damianavila" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
-<script type="text/javascript">
+#BODY_END = """
+#<script data-gittip-username="damianavila" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
+#<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33259189-1']);
-  _gaq.push(['_setDomainName', 'oquanta.info']);
-  _gaq.push(['_trackPageview']);
+#  var _gaq = _gaq || [];
+#  _gaq.push(['_setAccount', 'UA-33259189-1']);
+#  _gaq.push(['_setDomainName', 'oquanta.info']);
+#  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+#  (function() {
+#    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+#    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+#    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+#  })();
 
-</script>
-    """
+#</script>
+#    """
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
