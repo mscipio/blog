@@ -1,4 +1,4 @@
-I'm a biomedical engineer, but also an IT enthusiast (currently involved in a PhD program in biomedical engineering, you can see my CV clicking `here </ShortCV_English.pdf>`__) from the UNIPI - University of Pisa, Pisa, Italy. I'm also a TA in Immunology courses at U.N.L.P. and I taught biostatistics courses at the Colegio de Bioquímicos - Colegio Zonal XII - Buenos Aires. I'm a member of Python Argentina (PyAr) [1] and Quantitative Finance Club (QFClub) [2].
+I'm a biomedical engineer, but also an IT enthusiast (currently involved in a PhD program in biomedical engineering, you can see my CV clicking `here <../files/CV_eng _short.pdf>`__) from the UNIPI - University of Pisa, Pisa, Italy. I'm also a TA in Immunology courses at U.N.L.P. and I taught biostatistics courses at the Colegio de Bioquímicos - Colegio Zonal XII - Buenos Aires. I'm a member of Python Argentina (PyAr) [1] and Quantitative Finance Club (QFClub) [2].
 
 My main focus is the quantitative financial time series research and analysis using Python as the main computational tool. But, I also develop several data science, computer vision, and IPython-related projects.
  
@@ -22,3 +22,5 @@ Ref:
 [1] http://python.org.ar/pyar/
 
 [2] http://quantfinanceclub.com/
+
+`here <../files/CV_eng _long.pdf>`
