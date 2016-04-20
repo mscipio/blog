@@ -132,7 +132,9 @@ lang="{{ lang }}">
         {% if rel_link(permalink, url) == "#" %}
             <li><a href="{{ url }}" title="{{ text }}"><i class="{{ icon }}"></i></a></li>
         {% elif url[0] == "/" %}
-            <li><a href="{{ url }}" title="{{ text }}"><i class="{{ icon }}"></i></a></li>   
+            <li><a href="{{ url }}" title="{{ text }}"><i class="{{ icon }}"></i></a></li>  
+        {% elif text == "Home" %}
+            <li><a href="{{ url }}" title="{{ text }}"><i class="{{ icon }}"></i></a></li>    
         {% else %}
             <li><a href="{{ url }}" title="{{ text }}" target="_blank"><i class="{{ icon }}"></i></a></li>
         {% endif %}
