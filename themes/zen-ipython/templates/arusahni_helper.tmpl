@@ -130,7 +130,7 @@ lang="{{ lang }}">
 {% macro html_navigation_links() %}
     {% for url, text, icon in navigation_links[lang] %}   
         {% if icon == "title" %}
-            <li><a href="{{ url }}" title="{{ text }}"><img src="http://mscipio.github.io/TITLE.png" style="width:85px;height:85px; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);"></a></li> 
+            <li><a href="{{ url }}" title="{{ text }}"><img src="http://mscipio.github.io/TITLE.png" style="width:85px;height:85px; "></a></li> 
         {% elif rel_link(permalink, url) == "#" %}
             <li><a href="{{ url }}" title="{{ text }}"><i class="{{ icon }}"></i></a></li>   
         {% elif url[0] == "/" %}
