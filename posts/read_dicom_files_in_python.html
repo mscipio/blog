@@ -8,7 +8,12 @@ fb: http://ogp.me/ns/fb#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>How to read DICOM files into Python | Budding Scientist</title>
-<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/bitter.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="http://mscipio.github.io/posts/read_dicom_files_in_python.html">
 <meta property="fb:app_id" content="">
@@ -16,8 +21,7 @@ fb: http://ogp.me/ns/fb#
 <meta property="og:site_name" content="Budding Scientist">
 <meta property="og:title" content="How to read DICOM files into Python">
 <meta property="og:url" content="http://mscipio.github.io/posts/read_dicom_files_in_python.html">
-<meta property="og:description" content="Dataset
-Dataset is the main object you will work with directly. Dataset is derived from python’s dict, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of ">
+<meta property="og:description" content="Dataset¶Dataset is the main object you will work with directly. Dataset is derived from python’s dict, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of ">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2016-04-19T12:00:47+02:00">
 <meta property="article:tag" content="dicom">
@@ -75,7 +79,8 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Dataset</h3>
+<h3 id="Dataset">Dataset<a class="anchor-link" href="read_dicom_files_in_python.html#Dataset">¶</a>
+</h3>
 <p>Dataset is the main object you will work with directly. Dataset is derived from python’s dict, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of key:value pairs, where the key value is the DICOM (group,element) tag (as a Tag object, described below), and the value is a DataElement instance (also described below).</p>
 <p>A dataset could be created directly, but you will usually get one by reading an existing DICOM file (it could be a .dcm or a .img file):<!-- TEASER_END --></p>
 
@@ -87,8 +92,8 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">dicom</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">dicom</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">"1111.img"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">dicom</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">dicom</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">"1111.img"</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -111,7 +116,7 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">ds</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span>
 </pre></div>
 
 </div>
@@ -165,7 +170,8 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Access header data elements</h3>
+<h3 id="Access-header-data-elements">Access header data elements<a class="anchor-link" href="read_dicom_files_in_python.html#Access-header-data-elements">¶</a>
+</h3>
 <p>You can access specific data elements by name (DICOM ‘keyword’) or by DICOM tag number:</p>
 
 </div>
@@ -176,7 +182,7 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">ds</span><span class="o">.</span><span class="n">ManufacturerModelName</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">ManufacturerModelName</span>
 </pre></div>
 
 </div>
@@ -206,7 +212,7 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">ds</span><span class="p">[</span><span class="mh">0x0008</span><span class="p">,</span><span class="mh">0x1090</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="p">[</span><span class="mh">0x0008</span><span class="p">,</span><span class="mh">0x1090</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
 
 </div>
@@ -247,9 +253,9 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">ds</span><span class="o">.</span><span class="n">PatientID</span> <span class="o">=</span> <span class="s">"12345"</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">PatientID</span> <span class="o">=</span> <span class="s2">"12345"</span>
 <span class="n">ds</span><span class="o">.</span><span class="n">SeriesNumber</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">ds</span><span class="p">[</span><span class="mh">0x10</span><span class="p">,</span><span class="mh">0x10</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s">'Test'</span>
+<span class="n">ds</span><span class="p">[</span><span class="mh">0x10</span><span class="p">,</span><span class="mh">0x10</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s1">'Test'</span>
 </pre></div>
 
 </div>
@@ -273,7 +279,7 @@ Dataset is the main object you will work with directly. Dataset is derived from 
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">ds</span><span class="o">.</span><span class="n">dir</span><span class="p">(</span><span class="s">"pat"</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">dir</span><span class="p">(</span><span class="s2">"pat"</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -332,7 +338,7 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">data_element</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s">"PatientsName"</span><span class="p">)</span>  <span class="c"># or data_element = ds[0x10,0x10]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_element</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">data_element</span><span class="p">(</span><span class="s2">"PatientsName"</span><span class="p">)</span>  <span class="c1"># or data_element = ds[0x10,0x10]</span>
 <span class="n">data_element</span><span class="o">.</span><span class="n">VR</span><span class="p">,</span> <span class="n">data_element</span><span class="o">.</span><span class="n">value</span>
 </pre></div>
 
@@ -363,7 +369,8 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>"DataElement"</h3>
+<h3 id='"DataElement"'>"DataElement"<a class="anchor-link" href="read_dicom_files_in_python.html#%22DataElement%22">¶</a>
+</h3>
 <p>The DataElement class is not usually used directly in user code, but is used extensively by Dataset. DataElement is a simple object which stores the following things:</p>
 <ul>
 <li>
@@ -385,7 +392,7 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="s">"PatientName"</span> <span class="ow">in</span> <span class="n">ds</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">"PatientName"</span> <span class="ow">in</span> <span class="n">ds</span>
 </pre></div>
 
 </div>
@@ -425,8 +432,8 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="k">del</span> <span class="n">ds</span><span class="o">.</span><span class="n">SoftwareVersions</span>   <span class="c"># or del ds[0x0018, 0x1020]</span>
-<span class="s">"SoftwareVersions"</span> <span class="ow">in</span> <span class="n">ds</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">ds</span><span class="o">.</span><span class="n">SoftwareVersions</span>   <span class="c1"># or del ds[0x0018, 0x1020]</span>
+<span class="s2">"SoftwareVersions"</span> <span class="ow">in</span> <span class="n">ds</span>
 </pre></div>
 
 </div>
@@ -456,7 +463,8 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>TAG</h3>
+<h3 id="TAG">TAG<a class="anchor-link" href="read_dicom_files_in_python.html#TAG">¶</a>
+</h3>
 <p>Using DICOM keywords is the recommended way to access data elements, but you can also use the tag numbers directly. The Tag class is derived from python’s <em>int</em>, so in effect, it is just a number with some extra behaviour:</p>
 <ul>
 <li>Tag enforces that the DICOM tag fits in the expected 4-byte (group,element)</li>
@@ -472,14 +480,14 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">dicom.tag</span> <span class="k">import</span> <span class="n">Tag</span>
-<span class="n">t1</span><span class="o">=</span><span class="n">Tag</span><span class="p">(</span><span class="mh">0x00100010</span><span class="p">)</span> <span class="c"># all of these are equivalent</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dicom.tag</span> <span class="k">import</span> <span class="n">Tag</span>
+<span class="n">t1</span><span class="o">=</span><span class="n">Tag</span><span class="p">(</span><span class="mh">0x00100010</span><span class="p">)</span> <span class="c1"># all of these are equivalent</span>
 <span class="n">t2</span><span class="o">=</span><span class="n">Tag</span><span class="p">(</span><span class="mh">0x10</span><span class="p">,</span><span class="mh">0x10</span><span class="p">)</span>
 <span class="n">t3</span><span class="o">=</span><span class="n">Tag</span><span class="p">((</span><span class="mh">0x10</span><span class="p">,</span> <span class="mh">0x10</span><span class="p">))</span>
 <span class="nb">print</span> <span class="n">t1</span>
 
 <span class="n">t1</span><span class="o">==</span><span class="n">t2</span><span class="p">,</span> <span class="n">t1</span><span class="o">==</span><span class="n">t3</span>
-<span class="p">(</span><span class="k">True</span><span class="p">,</span> <span class="k">True</span><span class="p">)</span>
+<span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -517,7 +525,8 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Access image data</h3>
+<h3 id="Access-image-data">Access image data<a class="anchor-link" href="read_dicom_files_in_python.html#Access-image-data">¶</a>
+</h3>
 <p>DICOM Sequences are turned into python lists or strings. Items in the sequence are referenced by number, beginning at index 0 as per python convention. "Sequence" data type is derived from python’s <em>list</em>. The only added functionality is to <strong>make string representations prettier</strong>. Otherwise all the usual methods of list like item selection, append, etc. are available. To work with pixel data, the raw bytes are available through the usual tag:</p>
 
 </div>
@@ -528,7 +537,7 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">image_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">PixelData</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">PixelData</span>
 <span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">image_data</span><span class="p">)</span>
 </pre></div>
 
@@ -568,7 +577,7 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">ConstPixelDims</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Rows</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">Columns</span><span class="p">))</span>
 <span class="n">ConstPixelSpacing</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">PixelSpacing</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">PixelSpacing</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">SliceThickness</span><span class="p">))</span>
@@ -613,7 +622,7 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="p">(</span><span class="n">ConstPixelDims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">ConstPixelSpacing</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ConstPixelSpacing</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="p">(</span><span class="n">ConstPixelDims</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">ConstPixelSpacing</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ConstPixelSpacing</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="p">(</span><span class="n">ConstPixelDims</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">ConstPixelSpacing</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ConstPixelSpacing</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
@@ -637,7 +646,7 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="c"># The array is sized based on 'ConstPixelDims'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The array is sized based on 'ConstPixelDims'</span>
 <span class="n">ArrayDicom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">ConstPixelDims</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">pixel_array</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
 <span class="n">ArrayDicom</span><span class="p">[:,:]</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">pixel_array</span> 
 </pre></div>
@@ -652,11 +661,11 @@ You can also see all the names that pydicom knows about by viewing the _dicom_di
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">matplotlib</span> inline
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span><span class="p">,</span> <span class="n">cm</span>
 
 <span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s">'equal'</span><span class="p">)</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">set_cmap</span><span class="p">(</span><span class="n">pyplot</span><span class="o">.</span><span class="n">gray</span><span class="p">())</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">flipud</span><span class="p">(</span><span class="n">ArrayDicom</span><span class="p">[:,</span> <span class="p">:]))</span>
 <span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -730,7 +739,7 @@ Zen theme based in <a href="https://github.com/arusahni/website-template">Arusah
             
         </footer>
 </div>
-    </section><script src="../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
+    </section><script src="../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../assets/js/jquery.timeago.js" type="text/javascript"></script><script type="text/javascript">
             $(function(){
                 $('.timeago').timeago();
             });

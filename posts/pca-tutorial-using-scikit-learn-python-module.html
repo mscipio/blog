@@ -8,7 +8,12 @@ fb: http://ogp.me/ns/fb#
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>PCA tutorial using scikit-learn python module | Budding Scientist</title>
-<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/bitter.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/main.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html">
 <meta property="fb:app_id" content="">
@@ -16,8 +21,7 @@ fb: http://ogp.me/ns/fb#
 <meta property="og:site_name" content="Budding Scientist">
 <meta property="og:title" content="PCA tutorial using scikit-learn python module">
 <meta property="og:url" content="http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html">
-<meta property="og:description" content="Dimensionality Reduction: Principal Component Analysis in-depth
-
+<meta property="og:description" content="Dimensionality Reduction: Principal Component Analysis in-depth¶
 
 
 
@@ -85,8 +89,8 @@ We'll ">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Dimensionality Reduction: Principal Component Analysis in-depth</h3>
-
+<h3 id="Dimensionality-Reduction:-Principal-Component-Analysis-in-depth">Dimensionality Reduction: Principal Component Analysis in-depth<a class="anchor-link" href="pca-tutorial-using-scikit-learn-python-module.html#Dimensionality-Reduction:-Principal-Component-Analysis-in-depth">¶</a>
+</h3>
 </div>
 </div>
 </div>
@@ -106,14 +110,14 @@ We'll ">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">stats</span>
 
-<span class="c"># use seaborn plotting style defaults</span>
+<span class="c1"># use seaborn plotting style defaults</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span><span class="p">;</span> <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 </pre></div>
 
@@ -127,7 +131,8 @@ We'll ">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>Introducing Principal Component Analysis</h3>
+<h3 id="Introducing-Principal-Component-Analysis">Introducing Principal Component Analysis<a class="anchor-link" href="pca-tutorial-using-scikit-learn-python-module.html#Introducing-Principal-Component-Analysis">¶</a>
+</h3>
 <p>Principal Component Analysis is a very powerful unsupervised method for dimensionality reduction in data. It's easiest to visualize by looking at a two-dimensional dataset:</p>
 
 </div>
@@ -138,10 +143,10 @@ We'll ">
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">200</span><span class="p">)))</span><span class="o">.</span><span class="n">T</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'equal'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 
@@ -190,7 +195,7 @@ We'll ">
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_</span><span class="p">)</span>
@@ -234,11 +239,11 @@ We'll ">
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">length</span><span class="p">,</span> <span class="n">vector</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_</span><span class="p">,</span> <span class="n">pca</span><span class="o">.</span><span class="n">components_</span><span class="p">):</span>
     <span class="n">v</span> <span class="o">=</span> <span class="n">vector</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">length</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="s">'-k'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'equal'</span><span class="p">);</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="s1">'-k'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">);</span>
 </pre></div>
 
 </div>
@@ -279,7 +284,7 @@ We'll ">
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">clf</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span> <span class="c"># keep 95% of variance</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span> <span class="c1"># keep 95% of variance</span>
 <span class="n">X_trans</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">X_trans</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -321,10 +326,10 @@ We'll ">
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">X_new</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">X_trans</span><span class="p">)</span>
-<span class="n">x_plot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'o'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'X'</span><span class="p">)</span>
-<span class="n">xnew_plot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_new</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_new</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s">'ob'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'X_new'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'equal'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_new</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">X_trans</span><span class="p">)</span>
+<span class="n">x_plot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'X'</span><span class="p">)</span>
+<span class="n">xnew_plot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_new</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X_new</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="s1">'ob'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'X_new'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 
@@ -376,7 +381,8 @@ We'll ">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3>What do the Components Mean?</h3>
+<h3 id="What-do-the-Components-Mean?">What do the Components Mean?<a class="anchor-link" href="pca-tutorial-using-scikit-learn-python-module.html#What-do-the-Components-Mean?">¶</a>
+</h3>
 <p>PCA is a very useful dimensionality reduction algorithm, because it has a very intuitive interpretation via eigenvectors. The input data is represented as a vector: If we reduce the dimensionality in the pixel space to (say) 6, we recover only a partial image.</p>
 
 </div>
@@ -387,7 +393,7 @@ We'll ">
 <div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_digits</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">load_digits</span>
 <span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span>
@@ -413,7 +419,8 @@ We'll ">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4>Choosing the Number of Components</h4>
+<h4 id="Choosing-the-Number-of-Components">Choosing the Number of Components<a class="anchor-link" href="pca-tutorial-using-scikit-learn-python-module.html#Choosing-the-Number-of-Components">¶</a>
+</h4>
 <p>But how much information have we thrown away? We can figure this out by looking at the explained variance as a function of the components:</p>
 
 </div>
@@ -424,11 +431,11 @@ We'll ">
 <div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
 <span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'number of components'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'cumulative explained variance'</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'number of components'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'cumulative explained variance'</span><span class="p">);</span>
 </pre></div>
 
 </div>
@@ -506,7 +513,7 @@ Zen theme based in <a href="https://github.com/arusahni/website-template">Arusah
             
         </footer>
 </div>
-    </section><script src="../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
+    </section><script src="../assets/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="../assets/js/jquery.timeago.js" type="text/javascript"></script><script type="text/javascript">
             $(function(){
                 $('.timeago').timeago();
             });
