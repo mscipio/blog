@@ -72,10 +72,10 @@ DEFAULT_LANG = "en"
 # What other languages do you have?
 # The format is {"translationcode" : "path/to/translation" }
 # the path will be used as a prefix for the generated pages location
-TRANSLATIONS = {
-    DEFAULT_LANG: "",
-    #"es": "./es",
-}
+#TRANSLATIONS = {
+#    DEFAULT_LANG: "",
+#    #"es": "./es",
+#}
 
 # What will translated input files be named like?
 
@@ -124,7 +124,7 @@ TIMEZONE = "UTC+2"
 
 # Date format used to display post dates.
 # (str used by datetime.datetime.strftime)
-# DATE_FORMAT = '%Y-%m-%d %H:%M'
+#DATE_FORMAT = '%d-%m-%Y %H:%M'
 
 # While nikola can select a sensible locale for each language,
 # sometimes explicit control can come handy.
@@ -136,6 +136,7 @@ TIMEZONE = "UTC+2"
 # LOCALE_FALLBACK = locale to use when an explicit locale is unavailable
 # LOCALE_DEFAULT = locale to use for languages not mentioned in LOCALES; if
 # not set the default Nikola mapping is used.
+#LOCALES = "en"
 
 # POSTS and PAGES contains (wildcard, destination, template) tuples.
 #
