@@ -1,7 +1,7 @@
 I'm a biomedical engineer, but also an IT enthusiast currently involved in a PhD program in biomedical engineering at the University of Pisa (UNIPI), Pisa, Italy. 
 
 
-I got my B.Sc. at Marche's Politechnic University (UNIVPM), Ancona, Italy in 2011 and then my M.Sc. the University of Pisa (UNIPI) in 2015 (you can see a short version of my CV clicking `here <CV_eng_short.pdf>`__ or a longer one `here <CV_eng_long.pdf>`__).
+I got my B.Sc. at Marche's Politechnic University (UNIVPM), Ancona, Italy in 2011 and then my M.Sc. the University of Pisa (UNIPI) in 2015 (you can see a short version of my CV clicking `here <../CV_eng_short.pdf>`__ or a longer one `here <../CV_eng_long.pdf>`__).
 
 
 Since a couple of months I am member of the Europen Society for Molecular Imaging (`ESMI <http://www.e-smi.eu/>`__).
