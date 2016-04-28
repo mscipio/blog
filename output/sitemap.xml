@@ -7,78 +7,78 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>http://mscipio.github.io/2016/04/index.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/2016/index.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/archive.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/bayes.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/bayesian.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/dicom.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/emcee.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/index.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/medical-imaging.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/pca.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/posterior.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/pymc.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/python.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/categories/scikit-learn.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/index.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/posts/posterior-distribution-of-parameter-estimate.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/posts/read_dicom_files_in_python.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
  <url>
   <loc>http://mscipio.github.io/stories/about-me.html</loc>
-  <lastmod>2016-04-28T09:18:00Z</lastmod>
+  <lastmod>2016-04-28T09:25:00Z</lastmod>
  </url>
 </urlset>
