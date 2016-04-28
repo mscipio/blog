@@ -452,9 +452,9 @@ src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>"""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = """Contents &copy; {date} <a href="mailto:{email}">{author}</a> - 
+CONTENT_FOOTER = """Contents &copy; {date} <a href="mailto:{email}">{author}</a><br>
 Powered by <a href="http://getnikola.com">Nikola</a> - 
-Zen theme based in <a href="https://github.com/arusahni/website-template">Arusahni's website-template</a><br>
+Zen theme based on <a href="https://github.com/arusahni/website-template">Arusahni</a><br>
 {license}"""
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
