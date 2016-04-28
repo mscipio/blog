@@ -29,7 +29,7 @@
 body {
 	color: #4F5151;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 17px;
+	font-size: 14px;
 	line-height: 1.4;
 	padding: 1em;
 }
@@ -298,7 +298,7 @@ pre.code, code {
 	}
 
 	body {
-		font-size: 12pt;
+		font-size: 10pt;
 	}
 
 	a,
