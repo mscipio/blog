@@ -132,7 +132,7 @@ lang="{{ lang }}">
     	{% if text == "TITLE" %}
             <li><a href="{{ url }}" title="{{ text }}" target="_blank""><img src="http://mscipio.github.io/{{ text }}.png" style="width:120%;height:120%;border:0;-webkit-transform: rotate(-90deg);-ms-transform: rotate(-90deg);transform: rotate(-90deg); margin-bottom: 60px"></img></a></li>   
         {% elif icon == "img" %}
-            <li><a href="{{ url }}" title="{{ text }}" target="_blank""><img src="http://mscipio.github.io/{{ text }}.svg" style="width:50%;"></img></a></li>            
+            <li><a href="{{ url }}" title="{{ text }}" target="_blank""><img src="http://mscipio.github.io/{{ text }}.svg" style="width:10%;"></img></a></li>            
         {% elif rel_link(permalink, url) == "#" %}
             <li><a href="{{ url }}" title="{{ text }}"><i class="{{ icon }}"></i></a></li>   
         {% elif url[0] == "/" %}
