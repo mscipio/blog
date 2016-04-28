@@ -245,19 +245,19 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 120px;
+  width: 150px;
 }
-@media (max-width: 773px) {
+@media (max-width: none) {
   .social {
     position: relative;
   }
 }
-@media (min-width: 774px) and (max-width: 1047px) {
+@media (min-width: none) and (max-width: none) {
   .social {
-    width: 210px;
+    width: 180px;
   }
 }
-@media (max-width: 773px) {
+@media (max-width: none) {
   .social {
     width: 100%;
   }
@@ -267,22 +267,22 @@ section {
   margin: 0;
   top: 50px;
   display: table;
-  width: 180px;
+  width: 150px;
 }
-@media (max-width: 773px) {
+@media (max-width: none) {
   .social ul {
     position: relative;
   }
 }
-@media (max-width: 773px) {
+@media (max-width: none) {
   .social ul {
     display: block;
     top: 0px;
   }
 }
-@media (min-width: 774px) and (max-width: 1047px) {
+@media (min-width: none) and (max-width: none) {
   .social ul {
-    width: 210px;
+    width: 180px;
   }
 }
 .social ul li {
@@ -290,7 +290,7 @@ section {
   text-align: center;
   margin-top: 10px;
 }
-@media (max-width: 773px) {
+@media (max-width: none) {
   .social ul li {
     padding-top: 5%;
     padding-left: 3%;
@@ -304,7 +304,7 @@ section {
 .social ul li a .label {
   display: none;
 }
-@media (max-width: 773px) {
+@media (max-width: none) {
   .social ul li a .label {
     display: inline;
     padding-left: 0.5em;
@@ -313,7 +313,7 @@ section {
 .page-content {
   min-height: 100%;
   padding: 48px 0 60px 42px;
-  margin-left: 180px;
+  margin-left: 150px;
 }
 @media (min-width: 774px) and (max-width: 1047px) {
   .page-content {
