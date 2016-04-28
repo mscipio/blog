@@ -156,7 +156,7 @@ sub {
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
 
-  max-width: 100%;
+  max-width: none /*100%;*/
   /* Part 1: Set a maxium relative to the parent */
 
   width: auto\9;
@@ -2077,8 +2077,8 @@ dd {
   cursor: default;
 }
 body {
-  font-size: 16px;
-  font-size: 15px;
+  font-size: 17px;
+  font-size: 14px;
   line-height: 24px;
   color: #333333;
 }
@@ -2204,24 +2204,24 @@ a:focus {
 }
 .page-content > .content h1,
 .page-content > .content .h1 {
-  font-size: 41.25px;
+  font-size: 2.5em; /*41.25px;*/
 }
 .page-content > .content h2,
 .page-content > .content .h2 {
-  font-size: 33.75px;
+  font-size: 2em; /*33.75px;*/
 }
 .page-content > .content h3,
 .page-content > .content .h3 {
-  font-size: 26.25px;
+  font-size: 1.5em; /*26.25px;*/
 }
 .page-content > .content h4 {
-  font-size: 18.75px;
+  font-size: 1.2em; /*18.75px;*/
 }
 .page-content > .content h5 {
-  font-size: 15px;
+  font-size: 0.9em; /*15px;*/
 }
 .page-content > .content h6 {
-  font-size: 12.75px;
+  font-size: 0.7em; /*12.75px;*/
 }
 .page-content > .content h1 small {
   font-size: 26.25px;
@@ -3202,6 +3202,7 @@ div.prompt {
   font-size: 12px;
   /*background: url('../images/blue-mocha-grunge-reversed.jpg');*/
   margin-right: 1em;
+  margin-left: -30px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -3209,7 +3210,7 @@ div.prompt {
 
 div.output_prompt {
   /* 5px right shift to account for margin in parent container */
-  margin: 0 5px 0 0px;
+  margin: 0 5px 0 -30px;
 }
 
 div.output_area pre {
