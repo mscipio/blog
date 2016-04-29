@@ -297,7 +297,7 @@ section {
   .social ul {
     position: relative;
     width: 300px;
-    left: 20px;
+    left: 0px;
   }
 }
 @media (max-width: 773px) {
