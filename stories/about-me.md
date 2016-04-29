@@ -9,7 +9,7 @@
 Hi! I'm a **biomedical engineer**, but also an IT enthusiast currently involved in a *PhD program* in biomedical engineering at the **University of Pisa** (UNIPI), Pisa, Italy. 
 <br/>
 <br/>
-I got my BSc at Marche's Politechnic University (*UNIVPM*), Ancona (Italy) in 2011 and then my MSc at the University of Pisa (*UNIPI*) in 2015 (you can see a short version of my CV clicking [here](../CV_eng_short.pdf) or a longer one [here](../CV_eng_long.pdf).
+I got my BSc at Marche's Politechnic University (*UNIVPM*), Ancona (Italy) in 2011 and then my MSc at the University of Pisa (*UNIPI*) in 2015 (you can see a short version of my CV clicking [here](/files/CV_eng_short.pdf) or a longer one [here](/files/CV_eng_long.pdf).
 <br/>
 <br/>
 Since a couple of months I am member of the Europen Society for Molecular Imaging ([ESMI](http://www.e-smi.eu/)).
@@ -27,9 +27,9 @@ Recently, I have presented talks and posters in several international and nation
 
 <br/>
 
-* **EMIM 2016** [[poster](https://www.researchgate.net/publication/299851553_Pharmacokinetic_analysis_of_dynamic_PET_data_comparison_between_direct_parametric_reconstruction_and_conventional_indirect_voxel-based_estimation)]
+* **EMIM 2016** [[poster](https://www.researchgate.net/publication/299851553_Pharmacokinetic_analysis_of_dynamic_PET_data_comparison_between_direct_parametric_reconstruction_and_conventional_indirect_voxel-based_estimation)][[pdf](/files/POSTER_72dpi)]
 
-* **MEDICON 2016** [[talk](https://www.researchgate.net/publication/299843191_The_Influence_of_Noise_in_Dynamic_PET_Direct_Reconstruction)]
+* **MEDICON 2016** [[talk](https://www.researchgate.net/publication/299843191_The_Influence_of_Noise_in_Dynamic_PET_Direct_Reconstruction)] [[PowerPoint](/files/Scipioni_Apr2_1230_The influence of noise.pptx)]
 
 <br/>
 _______________________________________________________________________________________
