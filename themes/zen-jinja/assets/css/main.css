@@ -267,7 +267,7 @@ section {
   margin: 0;
   top: 50px;
   display: table;
-  width: 70px;
+  width: 300px;
 }
 @media (max-width: 773px) {
   .social ul {
