@@ -290,6 +290,8 @@ section {
   top: 50px;
   display: table;
   width: 70px;
+  padding-right: 25%;
+  padding-left: 25%;
 }
 @media (max-width: 773px) {
   .social ul {
@@ -300,7 +302,7 @@ section {
 @media (max-width: 773px) {
   .social ul {
     display: block;
-    top: -20px;
+    top: -10px;
   }
 }
 @media (min-width: 774px) and (max-width: 1047px) {
