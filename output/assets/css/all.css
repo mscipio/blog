@@ -252,9 +252,9 @@ section {
     position: relative;
   }
 }
-@media (min-width: 773px) and (max-width: 773px) {
+@media (min-width: 774px) and (max-width: 1047px) {
   .social {
-    width: 180px;
+    width: 150px;
   }
 }
 @media (max-width: 773px) {
@@ -280,9 +280,9 @@ section {
     top: 0px;
   }
 }
-@media (min-width: 773px) and (max-width: 773px) {
+@media (min-width: 774px) and (max-width: 1047px) {
   .social ul {
-    width: 180px;
+    width: 150px;
   }
 }
 .social ul li {
