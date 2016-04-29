@@ -19,7 +19,7 @@
         <h3 class="body" align="center">This is my personal "serious" blog where I will write posts about this and that as a Ph.D. student, developer and NERD!
         I hope you'll enjoy your staying!<br><br>
         What about starting by taking a look at my latest publications? </h3>
-        <br><br><hr align="left" size="1" width="100%"> <br><br>
+        <br><br><hr align="left" size="2" width="100%"> <br><br>
 
     {% for post in posts %}
         <div class="post">
@@ -43,6 +43,7 @@
             {% endif %}
             </div>
         </div>
+        <hr align="center" size="1" width="50%">
     {% endfor %}
     {{ helper.html_pager() }}
     {{ comments.comment_link_script() }}
