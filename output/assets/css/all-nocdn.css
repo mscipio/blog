@@ -291,7 +291,7 @@ section {
   bottom: 15px;
   left: 35px;
   display: table;
-  width: 70px;
+  width: 50px;
 }
 @media (max-width: 773px) {
   .social ul {
@@ -308,7 +308,7 @@ section {
 }
 @media (min-width: 774px) {
   .social ul {
-    width: 70px;
+    width: 50px;
   }
 }
 .social ul li {
