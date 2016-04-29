@@ -129,9 +129,6 @@ lang="{{ lang }}">
 
 {% macro html_navigation_links() %}
     {% for url, text, icon in navigation_links[lang] %}  
-    	{% if text == "TITLE" %}
-            {# <li><a href="{{ url }}" title="{{ text }}" target="_blank""><img src="/images/{{ text }}.png" style="width:120%;height:auto;border:0;-webkit-transform: rotate(-90deg);-ms-transform: rotate(-90deg);transform: rotate(-90deg); margin-bottom: 60px"></img></a></li>   #}
-        {% elif icon == "img" %}
         	{% if url[0] == "/" %}
         		<li><a href="{{ url }}" title="{{ text }}"><img src="/images/{{ text }}.png" style="width:100%;height:auto;border:0;"></a></li>  
         	{% elif rel_link(permalink, url) == "#" %}
@@ -141,7 +138,6 @@ lang="{{ lang }}">
         	{% else %}
         		<li><a href="{{ url }}" title="{{ text }}" target="_blank"><img src="/images/{{ text }}.png" style="width:100%;height:auto;border:0;"></a></li> 
         	{% endif %}
-        {% endif %}
     {% endfor %}
 {% endmacro %}
 

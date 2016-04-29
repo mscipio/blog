@@ -92,7 +92,6 @@ TRANSLATIONS_PATTERN = "{path}.{ext}.{lang}"
 # (the same way you would do with a (translatable) setting.)
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-    	('/index.html', 'TITLE', 'img'),
         ('/index.html', 'home', 'img'),
         ('/stories/about-me.html', 'about', 'img'),
         ('https://it.linkedin.com/in/scipionimichele', 'LinkedIn', 'img'),
