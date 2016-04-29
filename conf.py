@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Michele Scipioni"  # (translatable)
-BLOG_TITLE = "Budding Scientist"  # (translatable)
+BLOG_TITLE = "Blog | Michele Scipioni"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "http://mscipio.github.io/"
@@ -445,10 +445,10 @@ FEED_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a> ({min_remaining_re
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
 LICENSE = """
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA"
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+<img alt="Creative Commons License BY"
 style="border-width:0; margin-bottom:12px;"
-src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>"""
+src="https://licensebuttons.net/l/by/3.0/88x31.png"></a>"""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
