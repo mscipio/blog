@@ -27,7 +27,7 @@ Recently, I have presented talks and posters in several international and nation
 
 <br/>
 
-* **EMIM 2016** [[poster](https://www.researchgate.net/publication/299851553_Pharmacokinetic_analysis_of_dynamic_PET_data_comparison_between_direct_parametric_reconstruction_and_conventional_indirect_voxel-based_estimation)][[pdf](/files/POSTER_72dpi)]
+* **EMIM 2016** [[poster](https://www.researchgate.net/publication/299851553_Pharmacokinetic_analysis_of_dynamic_PET_data_comparison_between_direct_parametric_reconstruction_and_conventional_indirect_voxel-based_estimation)][[pdf](/files/POSTER_72dpi.pdf)]
 
 * **MEDICON 2016** [[talk](https://www.researchgate.net/publication/299843191_The_Influence_of_Noise_in_Dynamic_PET_Direct_Reconstruction)] [[PowerPoint](/files/Scipioni_Apr2_1230_The influence of noise.pptx)]
 
