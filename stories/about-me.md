@@ -1,5 +1,9 @@
 <br/>
 
+<img src="/images/ci.png" alt="Drawing" style="width: 150px;"/>
+
+<br/>
+
 ### SHORT BIO
 
 Hi! I'm a **biomedical engineer**, but also an IT enthusiast currently involved in a *PhD program* in biomedical engineering at the **University of Pisa** (UNIPI), Pisa, Italy. 
