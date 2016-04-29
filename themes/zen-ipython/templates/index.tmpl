@@ -14,9 +14,16 @@
 {% endblock %}
 
 {% block content %}
+    <div class="post">
+        <h1 class="title">Welcome on "Budding Scientist"!</h1><br>
+        <h3 class="body" align="center">This is my personal "serious" blog where I will write posts about this and that as a Ph.D. student, developer and NERD!
+        I hope you'll enjoy your staying!<br><br>
+        What about starting by taking a look at my latest publications? </h3>
+        <br><br><hr align="left" size="1" width="100%"> <br><br>
+
     {% for post in posts %}
         <div class="post">
-            <h1 class="title"><a href="{{ post.permalink() }}">{{ post.title() }}</a></h1>
+            <h2 class="title"><a href="{{ post.permalink() }}">{{ post.title() }}</a></h2>
             <div class="meta">
                 <div class="authordate">
                     <time class="timeago" datetime="{{ post.date.isoformat() }}">{{ post.formatted_date(date_format) }}</time>
