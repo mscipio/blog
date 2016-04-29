@@ -184,14 +184,14 @@ body {
 
 /* Links */
 :link {
-	color: #1168CC;
+	color: #0d53a3;
 	text-decoration: none;
 }
 :visited {
 	color: #6830BB;
 }
 :link:hover, :visited:hover {
-	color: #0d53a3;
+	color: #1168CC;
 }
 
 #brand :link,
