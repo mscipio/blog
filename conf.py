@@ -93,13 +93,13 @@ TRANSLATIONS_PATTERN = "{path}.{ext}.{lang}"
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
     	('/index.html', 'TITLE', 'img'),
-        ('/index.html', 'Home', 'icon-home'),
-        ('/stories/about-me.html', 'About me', 'icon-user'),
-        ('https://it.linkedin.com/in/scipionimichele', 'Linkedin', 'icon-linkedin'),
+        ('/index.html', 'home', 'img'),
+        ('/stories/about-me.html', 'about', 'img'),
+        ('https://it.linkedin.com/in/scipionimichele', 'LinkedIn', 'img'),
         ('https://www.researchgate.net/profile/Michele_Scipioni','ResearchGate', 'img'),
-        ('https://github.com/mscipio', 'My Github', 'icon-github'),
-        ('/categories/index.html', 'Tags', 'icon-tags'),
-        ('/archive.html', 'Archives', 'icon-folder-open-alt'),
+        ('https://github.com/mscipio', 'github', 'img'),
+        ('/categories/index.html', 'tag', 'img'),
+        ('/archive.html', 'folder', 'img'),
     ),
 }
 
