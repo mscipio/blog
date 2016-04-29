@@ -287,7 +287,9 @@ section {
 .social ul {
   position: fixed;
   margin: 0;
-  top: 50px;
+  top: 15px;
+  bottom: 15px;
+  left: 35px;
   display: table;
   width: 70px;
 }
