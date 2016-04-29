@@ -289,11 +289,12 @@ section {
   margin: 0;
   top: 50px;
   display: table;
-  width: 300px;
+  width: 150px;
 }
 @media (max-width: 773px) {
   .social ul {
     position: relative;
+    width: 300px;
   }
 }
 @media (max-width: 773px) {
