@@ -11772,8 +11772,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.io</span> <span class="k">import</span> <span class="n">wavfile</span>
-<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="k">import</span> <span class="n">resample</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">wavfile</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">resample</span>
 
 <span class="k">def</span> <span class="nf">load_wav</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">samplerate</span><span class="o">=</span><span class="mi">44100</span><span class="p">):</span>
     
@@ -11811,11 +11811,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#import StringIO</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#import StringIO</span>
 <span class="kn">import</span> <span class="nn">base64</span>
 <span class="kn">import</span> <span class="nn">struct</span>  
 
-<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="k">def</span> <span class="nf">wavPlayer</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">rate</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; will display html 5 player for compatible browser</span>
@@ -11825,12 +11825,12 @@ div#notebook {
 <span class="sd">    github.com/Carreau/posts/blob/master/07-the-sound-of-hydrogen.ipynb</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     
-    <span class="n">buffer</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;RIFF&#39;</span><span class="p">)</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;</span><span class="se">\x00\x00\x00\x00</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;WAVE&#39;</span><span class="p">)</span>
+    <span class="nb">buffer</span> <span class="o">=</span> <span class="n">six</span><span class="o">.</span><span class="n">moves</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;RIFF&#39;</span><span class="p">)</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;</span><span class="se">\x00\x00\x00\x00</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;WAVE&#39;</span><span class="p">)</span>
 
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;fmt &#39;</span><span class="p">)</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;fmt &#39;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">noc</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
@@ -11838,24 +11838,24 @@ div#notebook {
     <span class="n">bits</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">itemsize</span> <span class="o">*</span> <span class="mi">8</span>
     <span class="n">sbytes</span> <span class="o">=</span> <span class="n">rate</span><span class="o">*</span><span class="p">(</span><span class="n">bits</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">noc</span>
     <span class="n">ba</span> <span class="o">=</span> <span class="n">noc</span> <span class="o">*</span> <span class="p">(</span><span class="n">bits</span> <span class="o">//</span> <span class="mi">8</span><span class="p">)</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&lt;ihHIIHH&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">noc</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">sbytes</span><span class="p">,</span> <span class="n">ba</span><span class="p">,</span> <span class="n">bits</span><span class="p">))</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&lt;ihHIIHH&#39;</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">noc</span><span class="p">,</span> <span class="n">rate</span><span class="p">,</span> <span class="n">sbytes</span><span class="p">,</span> <span class="n">ba</span><span class="p">,</span> <span class="n">bits</span><span class="p">))</span>
 
     <span class="c1"># data chunk</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&lt;i&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">nbytes</span><span class="p">))</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&lt;i&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">nbytes</span><span class="p">))</span>
 
     <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;&gt;&#39;</span> <span class="ow">or</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;=&#39;</span> <span class="ow">and</span> <span class="n">sys</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;big&#39;</span><span class="p">):</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">byteswap</span><span class="p">()</span>
 
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">tostring</span><span class="p">())</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">tostring</span><span class="p">())</span>
     <span class="c1"># return buffer.getvalue()</span>
     <span class="c1"># Determine file size and place it in correct</span>
     <span class="c1"># position at start of the file.</span>
-    <span class="n">size</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-    <span class="n">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&lt;i&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">-</span><span class="mi">8</span><span class="p">))</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="nb">buffer</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="nb">buffer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&lt;i&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">-</span><span class="mi">8</span><span class="p">))</span>
     
-    <span class="n">val</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="nb">buffer</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span>
     
     <span class="n">src</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    &lt;head&gt;</span>
@@ -11865,7 +11865,7 @@ div#notebook {
 <span class="s2">    </span>
 <span class="s2">    &lt;body&gt;</span>
 <span class="s2">    &lt;audio controls=&quot;controls&quot; style=&quot;width:600px&quot; &gt;</span>
-<span class="s2">      &lt;source controls src=&quot;data:audio/wav;base64,</span><span class="si">{base64}</span><span class="s2">&quot; type=&quot;audio/wav&quot; /&gt;</span>
+<span class="s2">      &lt;source controls src=&quot;data:audio/wav;base64,{base64}&quot; type=&quot;audio/wav&quot; /&gt;</span>
 <span class="s2">      Your browser does not support the audio element.</span>
 <span class="s2">    &lt;/audio&gt;</span>
 <span class="s2">    &lt;/body&gt;</span>
@@ -11883,7 +11883,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now that we can load and play wav files we actually need some wav files! I found the sounds from Starcraft to be a great source of wav files because they're short, interesting and remind me of my childhood. You can download Starcraft wav files here: <a href="http://wavs.unclebubby.com/computer/starcraft/">http://wavs.unclebubby.com/computer/starcraft/</a> among other places on the web or from your Starcraft install directory (come on I know its still there).</p>
+<p>Now that we can load and play wav files we actually need some wav files! I found the sounds from Starcraft to be a great source of wav files because they're short, interesting and remind me of my childhood. You can download Starcraft wav files here: <a href="http://wavs.unclebubby.com/computer/starcraft/">http://wavs.unclebubby.com/computer/starcraft/</a> among other places on the web or from your Starcraft install directory (come on I know it's still there).</p>
 <p>Another good source of data (although lets be honest less cool) is ICA central and various other more academic data sets: <a href="http://perso.telecom-paristech.fr/~cardoso/icacentral/base_multi.html">http://perso.telecom-paristech.fr/~cardoso/icacentral/base_multi.html</a>. Note that for lots of these data sets the data will be mixed already so you'll be able to skip the next few steps.</p>
 
 </div>
@@ -11904,7 +11904,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># change to the shogun-data directoy</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># change to the shogun-data directoy</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;../files&#39;</span><span class="p">)</span>
 </pre></div>
@@ -11919,9 +11919,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
-<span class="kn">import</span> <span class="nn">pylab</span> <span class="k">as</span> <span class="nn">pl</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
+<span class="kn">import</span> <span class="nn">pylab</span> <span class="kn">as</span> <span class="nn">pl</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="c1"># load</span>
 <span class="n">fs1</span><span class="p">,</span><span class="n">s1</span> <span class="o">=</span> <span class="n">load_wav</span><span class="p">(</span><span class="s1">&#39;audio1.wav&#39;</span><span class="p">)</span> <span class="c1"># Terran Marine - &quot;You want a piece of me, boy?&quot;</span>
@@ -14886,7 +14886,7 @@ AVIBWQFaAVgBQwEYAeQAqQBmACUA+v/X/6X/b/9v/7P/
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># load</span>
 <span class="n">fs2</span><span class="p">,</span><span class="n">s2</span> <span class="o">=</span> <span class="n">load_wav</span><span class="p">(</span><span class="s1">&#39;audio2.wav&#39;</span><span class="p">)</span> <span class="c1"># Terran Battlecruiser - &quot;Good day, commander.&quot;</span>
 
 <span class="c1"># plot</span>
@@ -17802,7 +17802,7 @@ zv/N/87/zv/O/87/0P/R/9H/0P/S/9T/1f/V/9b/1//Z/9r/3P/d/93/3f/g/+H/4f/h/+T/5f/l
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># load</span>
 <span class="n">fs3</span><span class="p">,</span><span class="n">s3</span> <span class="o">=</span> <span class="n">load_wav</span><span class="p">(</span><span class="s1">&#39;audio3.wav&#39;</span><span class="p">)</span> <span class="c1"># Protoss Zealot - &quot;My life for Aiur!&quot;</span>
 
 <span class="c1"># plot</span>
@@ -20821,14 +20821,20 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Adjust for different clip lengths</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Adjust for different clip lengths</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="n">fs1</span>
 <span class="n">length</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">s1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">s2</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">s3</span><span class="p">)])</span>
 
-<span class="n">s1</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">length</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">s2</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">length</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">s3</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">length</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">length</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">s2</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">length</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">s3</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="n">length</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">refcheck</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
+<span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">The function numpy.c_ concatenates the numpy arrays given as input.</span>
+<span class="sd">The method numpy_array.T is the transpose operation that allow us </span>
+<span class="sd">to prepare an input source matrix of the right size (3, length), </span>
+<span class="sd">according to the chosen mixing matrix (3,3).</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="n">S</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
 
 <span class="c1"># Mixing Matrix</span>
@@ -20837,13 +20843,13 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
               <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> 
               <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span> 
-<span class="nb">print</span> <span class="s1">&#39;Mixing Matrix:&#39;</span>
-<span class="nb">print</span> <span class="n">A</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span> <span class="s1">&#39;Mixing Matrix:&#39;</span>
+<span class="k">print</span> <span class="n">A</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 
-<span class="c1"># Mix Signals</span>
+<span class="c1"># Mixed Signals</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">S</span><span class="p">)</span>
 
-<span class="c1"># Mixed Signal i</span>
+<span class="c1"># Exploring Mixed Signals</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">6.75</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
     <span class="n">pl</span><span class="o">.</span><span class="n">plot</span><span class="p">((</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">))</span>
@@ -29813,7 +29819,8 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now before we can work on separating these signals we need to get the data ready for Shogun, thankfully this is pretty easy!</p>
+<p>Now before we can work on separating these signals we need to get the data ready for Shogun.
+Thankfully this is pretty easy!</p>
 
 </div>
 </div>
@@ -29823,7 +29830,7 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">shogun.Features</span>  <span class="k">import</span> <span class="n">RealFeatures</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">shogun.Features</span>  <span class="kn">import</span> <span class="n">RealFeatures</span>
 
 <span class="c1"># Convert to features for shogun</span>
 <span class="n">mixed_signals</span> <span class="o">=</span> <span class="n">RealFeatures</span><span class="p">((</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">))</span>
@@ -29839,10 +29846,12 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now lets unmix those signals!</p>
-<p>In this example I'm going to use an Independent Component Analysis (ICA) algorithm called JADE. JADE is one of the ICA algorithms available in Shogun and it works by performing Aproximate Joint Diagonalization (AJD) on a 4th order cumulant tensor. I'm not going to go into a lot of detail on how JADE works behind the scenes but here is the reference for the original paper:</p>
-<p>Cardoso, J. F., &amp; Souloumiac, A. (1993). Blind beamforming for non-Gaussian signals. In IEE Proceedings F (Radar and Signal Processing) (Vol. 140, No. 6, pp. 362-370). IET Digital Library.</p>
+<p>Now lets <strong>unmix</strong> those signals!</p>
+<p>In this example I'm going to use an <strong>Independent Component Analysis (ICA)</strong> algorithm called <em>JADE</em>. JADE is one of the ICA algorithms available in Shogun and it works by performing <em>Aproximate Joint Diagonalization</em> (AJD) on a 4th order cumulant tensor. I'm not going to go into a lot of detail on how JADE works behind the scenes but here is the reference for the original paper:</p>
+<p><em>Cardoso, J. F., &amp; Souloumiac, A. (1993). Blind beamforming for non-Gaussian signals. In IEE Proceedings F (Radar and Signal Processing) (Vol. 140, No. 6, pp. 362-370). IET Digital Library.</em></p>
+<blockquote><p><strong>Note:</strong></p>
 <p>Shogun also has several other ICA algorithms including the Second Order Blind Identification (SOBI) algorithm, FFSep, JediSep, UWedgeSep and FastICA. All of the algorithms inherit from the ICAConverter base class and share some common methods for setting an intial guess for the mixing matrix, retrieving the final mixing matrix and getting/setting the number of iterations to run and the desired convergence tolerance. Some of the algorithms have additional getters for intermediate calculations, for example Jade has a method for returning the 4th order cumulant tensor while the "Sep" algorithms have a getter for the time lagged covariance matrices. Check out the source code on GitHub or the Shogun docs for more details!</p>
+</blockquote>
 
 </div>
 </div>
@@ -29852,7 +29861,7 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">shogun.Converter</span> <span class="k">import</span> <span class="n">Jade</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">shogun.Converter</span> <span class="kn">import</span> <span class="n">Jade</span>
 
 <span class="c1"># Separating with JADE</span>
 <span class="n">jade</span> <span class="o">=</span> <span class="n">Jade</span><span class="p">()</span>
@@ -29862,8 +29871,9 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 
 <span class="n">A_</span> <span class="o">=</span> <span class="n">jade</span><span class="o">.</span><span class="n">get_mixing_matrix</span><span class="p">()</span>
 <span class="n">A_</span> <span class="o">=</span> <span class="n">A_</span> <span class="o">/</span> <span class="n">A_</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s1">&#39;Estimated Mixing Matrix:&#39;</span>
-<span class="nb">print</span> <span class="n">A_</span>
+
+<span class="k">print</span> <span class="s1">&#39;Estimated Mixing Matrix:&#39;</span>
+<span class="k">print</span> <span class="n">A_</span>
 </pre></div>
 
 </div>
@@ -29893,7 +29903,8 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Thats all there is to it! Check out how nicely those signals have been separated and have a listen!</p>
+<p>Thats all there is to it!</p>
+<p>Check out how nicely those signals have been separated and have a listen!</p>
 
 </div>
 </div>
@@ -29903,7 +29914,7 @@ u/5//kv+Pf5L/lr+S/4W/tv9y/3b/dL9ov2H/aL9vv2j/XP9a/1r/Tj98Pz//Hf9
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show separation results</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Show separation results</span>
 
 <span class="c1"># Separated Signal i</span>
 <span class="n">gain</span> <span class="o">=</span> <span class="mi">4000</span>
@@ -38907,7 +38918,8 @@ AAAAAAAAAQABAAAA/v/9//3//f/7//f/9f/1//f/9//3//f/9//3//f/9//4//n/+P/3//f/+f/6
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>BSS isn't only useful for working with Audio, it is also useful for image processing and pre-processing other forms of high dimensional data. Have a google for ICA and machine learning if you want to learn more!</p>
+<p>BSS isn't only useful for working with Audio, it is also useful for image processing and pre-processing other forms of high dimensional data. 
+Have a google for ICA and machine learning if you want to learn more, but we will sure come back in the future on this topic!</p>
 
 </div>
 </div>
