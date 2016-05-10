@@ -1,50 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog | Michele Scipioni (python)</title><link>http://mscipio.github.io/</link><description></description><atom:link href="http://mscipio.github.io/categories/python.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 10 May 2016 15:46:20 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Blind Source Separation (BSS) with the Shogun Machine Learning Toolbox</title><link>http://mscipio.github.io/posts/bss-shogun-python.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h5 id="Strongly-inspired-by-an-article-by-Kevin-Hughes-(https://github.com/kevinhughes27?tab=repositories)"&gt;Strongly inspired by an article by Kevin Hughes (&lt;em&gt;&lt;a href="https://github.com/kevinhughes27?tab=repositories"&gt;https://github.com/kevinhughes27?tab=repositories&lt;/a&gt;&lt;/em&gt;)&lt;a class="anchor-link" href="http://mscipio.github.io/posts/bss-shogun-python.html#Strongly-inspired-by-an-article-by-Kevin-Hughes-(https://github.com/kevinhughes27?tab=repositories)"&gt;¶&lt;/a&gt;&lt;/h5&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Today I am going to show you how we can do Blind Source Separation (BSS) using algorithms available in the Shogun Machine Learning Toolbox. What is &lt;strong&gt;Blind Source Separation&lt;/strong&gt;? &lt;em&gt;BSS&lt;/em&gt; is the separation of a set of source signals from a set of mixed signals.&lt;/p&gt;
-&lt;p&gt;My favorite example of this problem is known as the &lt;strong&gt;cocktail party problem&lt;/strong&gt; where a number of people are talking simultaneously and we want to separate each persons speech so we can listen to it separately. Now the caveat with this type of approach is that we need as many mixtures as we have source signals or in terms of the cocktail party problem &lt;em&gt;we need as many microphones as people talking in the room&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Let's get started. This example is going to be in Python and the first thing we are going to need to do is &lt;em&gt;load some audio files&lt;/em&gt;. To make things a bit easier further on in this example I'm going to wrap the basic scipy wav file reader and add some additional functionality. First I added a case to handle converting stereo wav files back into mono wav files and secondly this loader takes a desired sample rate and resamples the input to match. This is important because when we mix the two audio signals they need to have the same sample rate. &lt;/p&gt;&lt;p&gt;&lt;a href="http://mscipio.github.io/posts/bss-shogun-python.html"&gt;Read more…&lt;/a&gt; (11 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>bss</category><category>machine learning</category><category>python</category><category>shogun</category><guid>http://mscipio.github.io/posts/bss-shogun-python.html</guid><pubDate>Tue, 10 May 2016 08:55:00 GMT</pubDate></item><item><title>Calculating the posterior probability distribution of parameters with emcee python module</title><link>http://mscipio.github.io/posts/posterior-distribution-of-parameter-estimate.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="The-emcee()-python-module"&gt;The &lt;strong&gt;emcee()&lt;/strong&gt; python module&lt;a class="anchor-link" href="http://mscipio.github.io/posts/posterior-distribution-of-parameter-estimate.html#The-emcee()-python-module"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;emcee&lt;/strong&gt; can be used to obtain the posterior probability distribution of parameters, given a set of experimental data. An example problem is a double exponential decay. A small amount of Gaussian noise is also added.&lt;/p&gt;&lt;p&gt;&lt;a href="http://mscipio.github.io/posts/posterior-distribution-of-parameter-estimate.html"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>bayes</category><category>bayesian</category><category>emcee</category><category>posterior</category><category>pymc</category><category>python</category><guid>http://mscipio.github.io/posts/posterior-distribution-of-parameter-estimate.html</guid><pubDate>Wed, 20 Apr 2016 08:08:47 GMT</pubDate></item><item><title>How to read DICOM files into Python</title><link>http://mscipio.github.io/posts/read_dicom_files_in_python.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Dataset"&gt;Dataset&lt;a class="anchor-link" href="http://mscipio.github.io/posts/read_dicom_files_in_python.html#Dataset"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Dataset is the main object you will work with directly. Dataset is derived from python’s &lt;strong&gt;dict&lt;/strong&gt;, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of key:value pairs, where the key value is the DICOM (group,element) tag (as a Tag object, described below), and the value is a DataElement instance (also described below).&lt;/p&gt;
-&lt;p&gt;A dataset could be created directly, but you will usually get one by reading an existing DICOM file (it could be a .dcm or a .img file):&lt;/p&gt;&lt;p&gt;&lt;a href="http://mscipio.github.io/posts/read_dicom_files_in_python.html"&gt;Read more…&lt;/a&gt; (5 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>dicom</category><category>medical imaging</category><category>python</category><guid>http://mscipio.github.io/posts/read_dicom_files_in_python.html</guid><pubDate>Tue, 19 Apr 2016 10:00:47 GMT</pubDate></item><item><title>Fitting theoretical model to data in python</title><link>http://mscipio.github.io/posts/fitting-functions-to-data.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog | Michele Scipioni (lmfit)</title><link>http://mscipio.github.io/</link><description></description><atom:link href="http://mscipio.github.io/categories/lmfit.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Tue, 10 May 2016 15:46:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fitting theoretical model to data in python</title><link>http://mscipio.github.io/posts/fitting-functions-to-data.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -715,22 +670,4 @@ Amp2 = 91.58 , Center2 = -146.19 , Sig2 = 10.26
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>least squares</category><category>lmfit</category><category>optimization</category><category>python</category><category>scipy</category><guid>http://mscipio.github.io/posts/fitting-functions-to-data.html</guid><pubDate>Mon, 18 Apr 2016 11:08:47 GMT</pubDate></item><item><title>PCA tutorial using scikit-learn python module</title><link>http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Dimensionality-Reduction:-Principal-Component-Analysis-in-depth"&gt;Dimensionality Reduction: Principal Component Analysis in-depth&lt;a class="anchor-link" href="http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html#Dimensionality-Reduction:-Principal-Component-Analysis-in-depth"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here we'll explore Principal Component Analysis, which is an extremely useful linear dimensionality reduction technique.&lt;/p&gt;
-&lt;p&gt;We'll start with our standard set of initial imports:&lt;/p&gt;&lt;p&gt;&lt;a href="http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>PCA</category><category>python</category><category>scikit-learn</category><guid>http://mscipio.github.io/posts/pca-tutorial-using-scikit-learn-python-module.html</guid><pubDate>Mon, 18 Apr 2016 11:08:47 GMT</pubDate></item></channel></rss>
+</description><category>least squares</category><category>lmfit</category><category>optimization</category><category>python</category><category>scipy</category><guid>http://mscipio.github.io/posts/fitting-functions-to-data.html</guid><pubDate>Mon, 18 Apr 2016 11:08:47 GMT</pubDate></item></channel></rss>

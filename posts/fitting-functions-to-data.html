@@ -6,123 +6,74 @@ fb: http://ogp.me/ns/fb#
 " lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Blogging about this and that as a PhD student/developer/nerd.">
 <meta name="viewport" content="width=device-width">
-<title>Blog | Michele Scipioni | Blog | Michele Scipioni</title>
-<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
-<link rel="canonical" href="http://mscipio.github.io/index.html">
+<title>Fitting theoretical model to data in python | Blog | Michele Scipioni</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="http://mscipio.github.io/posts/fitting-functions-to-data.html">
 <meta property="fb:app_id" content="">
-<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><style>
-    div.input_prompt {
-      display: none;
-    }
-    </style>
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="Michele Scipioni">
+<meta property="og:site_name" content="Blog | Michele Scipioni">
+<meta property="og:title" content="Fitting theoretical model to data in python">
+<meta property="og:url" content="http://mscipio.github.io/posts/fitting-functions-to-data.html">
+<meta property="og:description" content="Fitting Functions to Data¶There are several data fitting utilities available. We will focus on two:
+
+scipy.optimize
+lmfit.minimize
+
+Using both those modules, you can fit any arbitrary function that yo">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-04-18T13:08:47+02:00">
+<meta property="article:tag" content="least squares">
+<meta property="article:tag" content="lmfit">
+<meta property="article:tag" content="optimization">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="scipy">
 </head>
 <body>
     <section class="social"><ul>
-<li><a href="#" title="home"><img src="images/home.png" style="width:100%;height:auto;border:0;"></a></li>  
+<li><a href="../index.html" title="home"><img src="../images/home.png" style="width:100%;height:auto;border:0;"></a></li>  
   
-        		<li><a href="stories/about-me.html" title="about"><img src="images/about.png" style="width:100%;height:auto;border:0;"></a></li>  
+        		<li><a href="../stories/about-me.html" title="about"><img src="../images/about.png" style="width:100%;height:auto;border:0;"></a></li>  
   
-        		<li><a href="https://it.linkedin.com/in/scipionimichele" title="LinkedIn" target="_blank"><img src="images/LinkedIn.png" style="width:100%;height:auto;border:0;"></a></li> 
+        		<li><a href="https://it.linkedin.com/in/scipionimichele" title="LinkedIn" target="_blank"><img src="../images/LinkedIn.png" style="width:100%;height:auto;border:0;"></a></li> 
   
-        		<li><a href="https://www.researchgate.net/profile/Michele_Scipioni" title="ResearchGate" target="_blank"><img src="images/ResearchGate.png" style="width:100%;height:auto;border:0;"></a></li> 
+        		<li><a href="https://www.researchgate.net/profile/Michele_Scipioni" title="ResearchGate" target="_blank"><img src="../images/ResearchGate.png" style="width:100%;height:auto;border:0;"></a></li> 
   
-        		<li><a href="https://github.com/mscipio" title="github" target="_blank"><img src="images/github.png" style="width:100%;height:auto;border:0;"></a></li> 
+        		<li><a href="https://github.com/mscipio" title="github" target="_blank"><img src="../images/github.png" style="width:100%;height:auto;border:0;"></a></li> 
   
-        		<li><a href="categories/index.html" title="tag"><img src="images/tag.png" style="width:100%;height:auto;border:0;"></a></li>  
+        		<li><a href="../categories/index.html" title="tag"><img src="../images/tag.png" style="width:100%;height:auto;border:0;"></a></li>  
   
-        		<li><a href="archive.html" title="folder"><img src="images/folder.png" style="width:100%;height:auto;border:0;"></a></li>  
+        		<li><a href="../archive.html" title="folder"><img src="../images/folder.png" style="width:100%;height:auto;border:0;"></a></li>  
 
         </ul></section><section class="page-content"><div class="content" rel="main">
     <div class="post">
-        <h1 class="title">Welcome!</h1>
-<br><h3 class="body" align="center">This is my personal "serious" blog where I will write posts about this and that as a Ph.D. student, developer and NERD!
-        I hope you'll enjoy your staying!<br><br>
-        What about starting by taking a look at my latest publications? </h3>
-        <br><br><hr align="left" size="2" width="100%">
-<br><br><div class="post">
-            <h2 class="title"><a href="posts/bss-shogun-python.html">Blind Source Separation (BSS) with the Shogun Machine Learning Toolbox</a></h2>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-05-10T10:55:00+02:00">2016-05-10 10:55</time>
-</div>
-                <div class="stats">
-                            <span class="fb-comments-count" data-url="/posts/bss-shogun-python.html">
+        <h1 class="p-name entry-title" itemprop="headline name">Fitting theoretical model to data in python</h1>
 
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2016-04-18T13:08:47+02:00">2016-04-18 13:08</time>
+            
+                      |  
+        <a href="fitting-functions-to-data.ipynb" id="sourcelink">Source</a>
+          |  
+        <a href="javascript:%24.getScript(%22/assets/js/miniPageNav.js%22);">Minimap</a>
 
-                </span>
-</div>
-                        <div itemprop="keywords" class="tags">
+            </div>
+                    <div itemprop="keywords" class="tags">
         <ul>
         Tags : 
-           <li><a class="tag p-category" href="categories/bss.html" rel="tag">bss</a></li>
-           <li><a class="tag p-category" href="categories/machine-learning.html" rel="tag">machine learning</a></li>
-           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
-           <li><a class="tag p-category" href="categories/shogun.html" rel="tag">shogun</a></li>
+           <li><a class="tag p-category" href="../categories/least-squares.html" rel="tag">least squares</a></li>
+           <li><a class="tag p-category" href="../categories/lmfit.html" rel="tag">lmfit</a></li>
+           <li><a class="tag p-category" href="../categories/optimization.html" rel="tag">optimization</a></li>
+           <li><a class="tag p-category" href="../categories/python.html" rel="tag">python</a></li>
+           <li><a class="tag p-category" href="../categories/scipy.html" rel="tag">scipy</a></li>
         </ul>
 </div>
 
-            </div>
-            <div class="body">
-                <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Strongly-inspired-by-an-article-by-Kevin-Hughes-(https://github.com/kevinhughes27?tab=repositories)">Strongly inspired by an article by Kevin Hughes (<em><a href="https://github.com/kevinhughes27?tab=repositories">https://github.com/kevinhughes27?tab=repositories</a></em>)<a class="anchor-link" href="posts/bss-shogun-python.html#Strongly-inspired-by-an-article-by-Kevin-Hughes-(https://github.com/kevinhughes27?tab=repositories)">¶</a>
-</h5>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Today I am going to show you how we can do Blind Source Separation (BSS) using algorithms available in the Shogun Machine Learning Toolbox. What is <strong>Blind Source Separation</strong>? <em>BSS</em> is the separation of a set of source signals from a set of mixed signals.</p>
-<p>My favorite example of this problem is known as the <strong>cocktail party problem</strong> where a number of people are talking simultaneously and we want to separate each persons speech so we can listen to it separately. Now the caveat with this type of approach is that we need as many mixtures as we have source signals or in terms of the cocktail party problem <em>we need as many microphones as people talking in the room</em>.</p>
-<p>Let's get started. This example is going to be in Python and the first thing we are going to need to do is <em>load some audio files</em>. To make things a bit easier further on in this example I'm going to wrap the basic scipy wav file reader and add some additional functionality. First I added a case to handle converting stereo wav files back into mono wav files and secondly this loader takes a desired sample rate and resamples the input to match. This is important because when we mix the two audio signals they need to have the same sample rate. </p>
-<p class="more"><a href="posts/bss-shogun-python.html">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-            </div>
         </div>
-        <hr align="center" size="1" width="50%">
-<div class="post">
-            <h2 class="title"><a href="posts/posterior-distribution-of-parameter-estimate.html">Calculating the posterior probability distribution of parameters with emcee python module</a></h2>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-04-20T10:08:47+02:00">2016-04-20 10:08</time>
-</div>
-                <div class="stats">
-                            <span class="fb-comments-count" data-url="/posts/posterior-distribution-of-parameter-estimate.html">
-
-
-                </span>
-</div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/bayes.html" rel="tag">bayes</a></li>
-           <li><a class="tag p-category" href="categories/bayesian.html" rel="tag">bayesian</a></li>
-           <li><a class="tag p-category" href="categories/emcee.html" rel="tag">emcee</a></li>
-           <li><a class="tag p-category" href="categories/posterior.html" rel="tag">posterior</a></li>
-           <li><a class="tag p-category" href="categories/pymc.html" rel="tag">pymc</a></li>
-           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
-        </ul>
-</div>
-
-            </div>
-            <div class="body">
-                <div tabindex="-1" id="notebook" class="border-box-sizing">
+        <div class="body">
+            <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered">
@@ -130,156 +81,7 @@ fb: http://ogp.me/ns/fb#
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-emcee()-python-module">The <strong>emcee()</strong> python module<a class="anchor-link" href="posts/posterior-distribution-of-parameter-estimate.html#The-emcee()-python-module">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>emcee</strong> can be used to obtain the posterior probability distribution of parameters, given a set of experimental data. An example problem is a double exponential decay. A small amount of Gaussian noise is also added.</p>
-<p class="more"><a href="posts/posterior-distribution-of-parameter-estimate.html">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-            </div>
-        </div>
-        <hr align="center" size="1" width="50%">
-<div class="post">
-            <h2 class="title"><a href="posts/read_dicom_files_in_python.html">How to read DICOM files into Python</a></h2>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-04-19T12:00:47+02:00">2016-04-19 12:00</time>
-</div>
-                <div class="stats">
-                            <span class="fb-comments-count" data-url="/posts/read_dicom_files_in_python.html">
-
-
-                </span>
-</div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/dicom.html" rel="tag">dicom</a></li>
-           <li><a class="tag p-category" href="categories/medical-imaging.html" rel="tag">medical imaging</a></li>
-           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
-        </ul>
-</div>
-
-            </div>
-            <div class="body">
-                <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dataset">Dataset<a class="anchor-link" href="posts/read_dicom_files_in_python.html#Dataset">¶</a>
-</h3>
-<p>Dataset is the main object you will work with directly. Dataset is derived from python’s <strong>dict</strong>, so it inherits (and overrides some of) the methods of dict. In other words it is a collection of key:value pairs, where the key value is the DICOM (group,element) tag (as a Tag object, described below), and the value is a DataElement instance (also described below).</p>
-<p>A dataset could be created directly, but you will usually get one by reading an existing DICOM file (it could be a .dcm or a .img file):</p>
-<p class="more"><a href="posts/read_dicom_files_in_python.html">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-            </div>
-        </div>
-        <hr align="center" size="1" width="50%">
-<div class="post">
-            <h2 class="title"><a href="posts/pca-tutorial-using-scikit-learn-python-module.html">PCA tutorial using scikit-learn python module</a></h2>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-04-18T13:08:47+02:00">2016-04-18 13:08</time>
-</div>
-                <div class="stats">
-                            <span class="fb-comments-count" data-url="/posts/pca-tutorial-using-scikit-learn-python-module.html">
-
-
-                </span>
-</div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/pca.html" rel="tag">PCA</a></li>
-           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
-           <li><a class="tag p-category" href="categories/scikit-learn.html" rel="tag">scikit-learn</a></li>
-        </ul>
-</div>
-
-            </div>
-            <div class="body">
-                <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Dimensionality-Reduction:-Principal-Component-Analysis-in-depth">Dimensionality Reduction: Principal Component Analysis in-depth<a class="anchor-link" href="posts/pca-tutorial-using-scikit-learn-python-module.html#Dimensionality-Reduction:-Principal-Component-Analysis-in-depth">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here we'll explore Principal Component Analysis, which is an extremely useful linear dimensionality reduction technique.</p>
-<p>We'll start with our standard set of initial imports:</p>
-<p class="more"><a href="posts/pca-tutorial-using-scikit-learn-python-module.html">Read more…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-            </div>
-        </div>
-        <hr align="center" size="1" width="50%">
-<div class="post">
-            <h2 class="title"><a href="posts/fitting-functions-to-data.html">Fitting theoretical model to data in python</a></h2>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-04-18T13:08:47+02:00">2016-04-18 13:08</time>
-</div>
-                <div class="stats">
-                            <span class="fb-comments-count" data-url="/posts/fitting-functions-to-data.html">
-
-
-                </span>
-</div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        Tags : 
-           <li><a class="tag p-category" href="categories/least-squares.html" rel="tag">least squares</a></li>
-           <li><a class="tag p-category" href="categories/lmfit.html" rel="tag">lmfit</a></li>
-           <li><a class="tag p-category" href="categories/optimization.html" rel="tag">optimization</a></li>
-           <li><a class="tag p-category" href="categories/python.html" rel="tag">python</a></li>
-           <li><a class="tag p-category" href="categories/scipy.html" rel="tag">scipy</a></li>
-        </ul>
-</div>
-
-            </div>
-            <div class="body">
-                <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Fitting-Functions-to-Data">Fitting Functions to Data<a class="anchor-link" href="posts/fitting-functions-to-data.html#Fitting-Functions-to-Data">¶</a>
+<h2 id="Fitting-Functions-to-Data">Fitting Functions to Data<a class="anchor-link" href="fitting-functions-to-data.html#Fitting-Functions-to-Data">¶</a>
 </h2>
 <p>There are several data fitting utilities available. We will focus on two:</p>
 <ul>
@@ -288,7 +90,7 @@ fb: http://ogp.me/ns/fb#
 </ul>
 <p>Using both those modules, you can fit any arbitrary function that you define and it is, also, possible to constrain given parameters during the fit. Another important aspect is that both packages come with useful
 diagnostic tools.</p>
-<h3 id="Fitting-Basics">Fitting Basics<a class="anchor-link" href="posts/fitting-functions-to-data.html#Fitting-Basics">¶</a>
+<h3 id="Fitting-Basics">Fitting Basics<a class="anchor-link" href="fitting-functions-to-data.html#Fitting-Basics">¶</a>
 </h3>
 <p>The <em>fitting</em> we discuss here is an iterative process.</p>
 <ul>
@@ -309,7 +111,7 @@ diagnostic tools.</p>
 </li>
 <li>Other methods include the <strong>Nelder-Mead</strong>, <strong>L-BFGS-B</strong>, and <strong>Simulated Annealing</strong>algorithms</li>
 </ul>
-<h3 id="Goodness-of-Fit-(GoF)">Goodness-of-Fit (GoF)<a class="anchor-link" href="posts/fitting-functions-to-data.html#Goodness-of-Fit-(GoF)">¶</a>
+<h3 id="Goodness-of-Fit-(GoF)">Goodness-of-Fit (GoF)<a class="anchor-link" href="fitting-functions-to-data.html#Goodness-of-Fit-(GoF)">¶</a>
 </h3>
 <p>There are several statistics that can help you determine the goodness-of-fit. Most commonly used are:</p>
 <ul>
@@ -317,7 +119,7 @@ diagnostic tools.</p>
 <li>Standard error</li>
 </ul>
 <p>You can get these and other tools for free with <strong>lmfit.minimize</strong></p>
-<h3 id="Example-1:-Fit-a-quadratic-curve-with-no-constraints">Example 1: Fit a quadratic curve with no constraints<a class="anchor-link" href="posts/fitting-functions-to-data.html#Example-1:-Fit-a-quadratic-curve-with-no-constraints">¶</a>
+<h3 id="Example-1:-Fit-a-quadratic-curve-with-no-constraints">Example 1: Fit a quadratic curve with no constraints<a class="anchor-link" href="fitting-functions-to-data.html#Example-1:-Fit-a-quadratic-curve-with-no-constraints">¶</a>
 </h3>
 <p>First, let's try fitting a simple quadratic to some fake data:</p>
 $$ y = ax^2 + bx + c $$<p>What we will do:</p>
@@ -572,7 +374,7 @@ a = 1.01 , b = -0.22 , c = 0.63
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Example-2:-More-complex-functions,-with-constraints">Example 2: More complex functions, with constraints<a class="anchor-link" href="posts/fitting-functions-to-data.html#Example-2:-More-complex-functions,-with-constraints">¶</a>
+<h3 id="Example-2:-More-complex-functions,-with-constraints">Example 2: More complex functions, with constraints<a class="anchor-link" href="fitting-functions-to-data.html#Example-2:-More-complex-functions,-with-constraints">¶</a>
 </h3>
 <p>Often we want to set limits on the values that our fitted parameters can have, for example, to be sure that one of the parameters can't be negative, etc.</p>
 <p>To do this, we can use <em>scipy.optimize.minimize()</em> or another useful package could be <em>lmfit.minimize()</em>:</p>
@@ -972,19 +774,14 @@ Amp2 = 91.58 , Center2 = -146.19 , Sig2 = 10.26
     </div>
   </div>
 
-            </div>
         </div>
-        <hr align="center" size="1" width="50%">
+                <ul class="pager hidden-print">
+<li class="next">
+                <a href="pca-tutorial-using-scikit-learn-python-module.html" rel="next" title="PCA tutorial using scikit-learn python module">Next post</a>
+            </li>
+        </ul>
 <div id="fb-root"></div>
 <script>
-    // thank lxml for this
-    $('.fb-comments-count').each(function(i, obj) {
-        var url = obj.attributes['data-url'].value;
-        // change here if you dislike the default way of displaying
-        // this
-        obj.innerHTML = '<fb:comments-count href="' + url + '"></fb:comments-count> comments';
-    });
-
   window.fbAsyncInit = function() {
     // init the FB JS SDK
     FB.init({
@@ -1003,18 +800,21 @@ Amp2 = 91.58 , Center2 = -146.19 , Sig2 = 10.26
      js.src = "https://connect.facebook.net/en_US/all.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+</script><div class="fb-comments" data-href="http://mscipio.github.io/posts/fitting-functions-to-data.html" data-width="470"></div>
+
+
+                    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-            </script><footer id="footer"><p>Contents © 2016 <a href="mailto:scipioni.michele@gmail.com">Michele Scipioni</a><br>
+            </script>
+</div>
+                    <footer id="footer"><p>Contents © 2016 <a href="mailto:scipioni.michele@gmail.com">Michele Scipioni</a><br>
 Powered by <a href="http://getnikola.com">Nikola</a> - 
 Zen theme based on <a href="https://github.com/arusahni/website-template">Arusahni</a><br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
 <img alt="Creative Commons License BY" style="border-width:0; margin-bottom:12px;" src="https://licensebuttons.net/l/by/3.0/88x31.png"></a></p>
             
         </footer>
 </div>
-    
-    
-<script>
+    </section><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -1023,11 +823,10 @@ Zen theme based on <a href="https://github.com/arusahni/website-template">Arusah
   ga('create', 'UA-13044251-8', 'auto');
   ga('send', 'pageview');
 
-</script><script src="assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
+</script><script src="../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
             $(function(){
                 $('.timeago').timeago();
             });
         </script>
-</div></section>
 </body>
 </html>
