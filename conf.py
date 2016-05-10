@@ -24,7 +24,7 @@ BLOG_TITLE = "Blog | Michele Scipioni"  # (translatable)
 SITE_URL = "http://mscipio.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "http://mscipio.github.io/"
+BASE_URL = "http://mscipio.github.io/"
 BLOG_EMAIL = "scipioni.michele@gmail.com"
 BLOG_DESCRIPTION = "Blogging about this and that as a PhD student/developer/nerd."  # (translatable)
 
@@ -682,23 +682,18 @@ SEARCH_FORM = """
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
-#BODY_END = """
-#<script data-gittip-username="damianavila" data-gittip-widget="button" src="//gttp.co/v1.js"></script>
-#<script type="text/javascript">
+ANALYTICS = """
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-#  var _gaq = _gaq || [];
-#  _gaq.push(['_setAccount', 'UA-33259189-1']);
-#  _gaq.push(['_setDomainName', 'oquanta.info']);
-#  _gaq.push(['_trackPageview']);
+  ga('create', 'UA-13044251-8', 'auto');
+  ga('send', 'pageview');
 
-#  (function() {
-#    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-#    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-#    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-#  })();
-
-#</script>
-#    """
+</script>
+"""
 
 # The possibility to extract metadata from the filename by using a
 # regular expression.
@@ -802,4 +797,10 @@ LOGGING_HANDLERS = {
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+#GLOBAL_CONTEXT = {
+#		'analytics': ANALYTICS,
+#		'blog_title': BLOG_TITLE,
+#		'blog_url': BASE_URL,
+#		'license': LICENSE,
+#		'navigation_links': NAVIGATION_LINKS
+#}
