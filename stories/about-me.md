@@ -21,7 +21,7 @@ My main research topic is about the **quantitative analysis** of dynamic time se
 _______________________________________________________________________________________
 <br/>
 
-### CONFERENCE ATTENDANCE
+### CONFERENCES ATTENDANCE
 
 Recently, I have presented talks and posters in several international and national conferences: 
 
