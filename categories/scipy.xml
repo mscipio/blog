@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Blog | Michele Scipioni (scipy)</title><link>http://mscipio.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="http://mscipio.github.io/categories/scipy.xml"></atom:link><language>en</language><lastBuildDate>Wed, 11 May 2016 08:59:34 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Simple nonlinear least squares curve fitting in Python</title><link>http://mscipio.github.io/posts/Python_nonlinear_least_squares.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Blog | Michele Scipioni (scipy)</title><link>http://mscipio.github.io/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://mscipio.github.io/categories/scipy.xml"></atom:link><language>en</language><lastBuildDate>Wed, 11 May 2016 09:00:45 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Simple nonlinear least squares curve fitting in Python</title><link>http://mscipio.github.io/posts/Python_nonlinear_least_squares.html</link><dc:creator>Michele Scipioni</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -7,7 +7,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="The-problem"&gt;The problem&lt;a class="anchor-link" href="http://mscipio.github.io/posts/Python_nonlinear_least_squares.html#The-problem"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Todoay we are going to test a very simple example of nonlinear least square curve fitting using the &lt;em&gt;scipy.optimize&lt;/em&gt; module.&lt;/p&gt;
+&lt;h3 id="The-problem"&gt;The problem&lt;a class="anchor-link" href="http://mscipio.github.io/posts/Python_nonlinear_least_squares.html#The-problem"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Today we are going to test a very simple example of nonlinear least squares curve fitting using the &lt;em&gt;scipy.optimize&lt;/em&gt; module.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
